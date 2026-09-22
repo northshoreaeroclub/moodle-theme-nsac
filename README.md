@@ -2,16 +2,21 @@
 
 ## Deployment
 
-Update `version.php` as required.
+Update `version.php` as required and commit.
 
 ```
 $plugin->version = '2026042000';
 $plugin->release = '0.0.1';
 ```
 
-Copy to `/srv/www/moodle/public/theme/nsac`.
+On the production server, navigate to `/srv/www/moodle/public/theme/nsac`.
 
-Update on the server:
+Run `git pull`
+
+This will automatically pull the latest version of the plugin, and clear theme caches via git hooks.
+
+If the version or release has increased:
+
 - Navigate to Site administration, Notifications
 - Check for available updates
 - Continue
